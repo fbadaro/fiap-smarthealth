@@ -1,9 +1,8 @@
-﻿namespace Fiap.Smarthealth.Core.Entities
+﻿namespace Fiap.Smarthealth.Core.Entities;
+
+public enum EntityValidationType
 {
-    public enum EntityValidationType
-    {
-        Save,
-        Update,
-        Delete
-    }
+    Save,
+    Update,
+    Delete
 }

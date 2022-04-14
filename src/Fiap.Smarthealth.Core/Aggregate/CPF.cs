@@ -7,7 +7,7 @@
             Numero = numero;
             Emissor = emissor;
             UF = uF;
-        }
+        }        
 
         public string Numero { get; set; }
 

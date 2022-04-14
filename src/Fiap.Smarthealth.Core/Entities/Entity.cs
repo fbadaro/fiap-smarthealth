@@ -1,7 +1,6 @@
-﻿namespace Fiap.Smarthealth.Core.Entities
+﻿namespace Fiap.Smarthealth.Core.Entities;
+
+public abstract class Entity<T>
 {
-    public abstract class Entity<T>
-    {
-        T Id { get; set; }        
-    }
+    public int Id { get; set; }
 }

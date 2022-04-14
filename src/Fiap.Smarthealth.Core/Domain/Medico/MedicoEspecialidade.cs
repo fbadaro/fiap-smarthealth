@@ -1,14 +1,15 @@
 ﻿using Fiap.Smarthealth.Core.Entities;
 
-namespace Fiap.Smarthealth.Core.Domain
-{
-    public class MedicoEspecialidade : Entity<Guid>
-    {
-        public MedicoEspecialidade(string especialidade)
-        {
-            Especialidade = especialidade;
-        }
+namespace Fiap.Smarthealth.Core.Domain;
 
-        public string Especialidade { get; private set; }
+public class MedicoEspecialidade : Entity<Guid>
+{
+    public MedicoEspecialidade(string especialidade)
+    {
+        Especialidade = especialidade;
     }
+
+    public MedicoEspecialidade() { }
+
+    public string Especialidade { get; private set; }
 }

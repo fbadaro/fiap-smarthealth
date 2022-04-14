@@ -1,5 +1,5 @@
 ﻿namespace Fiap.Smarthealth.Core.Aggregate
-{
+{    
     public class CNPJ
     {
         public CNPJ(string numero, string emissor)
