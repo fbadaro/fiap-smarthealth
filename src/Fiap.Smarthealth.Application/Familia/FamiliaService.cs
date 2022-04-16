@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Fiap.Smarthealth.Data.SQLServer.Repository.Familia;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,33 +9,40 @@ namespace Fiap.Smarthealth.Application.Familia;
 
 public class FamiliaService : IFamiliaService
 {
-    public Task<FamiliaDTO> CreateAsync(FamiliaDTO entity)
+    private readonly IFamiliaRepository _familiaRepository;
+
+    public FamiliaService(IFamiliaRepository familiaRepository)
+    {
+        _familiaRepository = familiaRepository;
+    }
+
+    public async Task<FamiliaDTO> CreateAsync(FamiliaDTO entity)
     {
         throw new NotImplementedException();
     }
 
-    public Task DeleteAsync(FamiliaDTO entity)
+    public async Task DeleteAsync(FamiliaDTO entity)
     {
         throw new NotImplementedException();
-    }        
+    }   
 
-    public Task<List<FamiliaDTO>> GetAllAsync()
-    {
-        throw new NotImplementedException();
-    }
-
-    public Task<FamiliaDTO> GetById(Guid id)
+    public async Task<List<FamiliaDTO>> GetAllAsync()
     {
         throw new NotImplementedException();
     }
 
-    public Task<FamiliaDTO> UpdateAsync(FamiliaDTO entity)
+    public async Task<FamiliaDTO> GetById(Guid id)
+    {
+        throw new NotImplementedException();
+    }
+
+    public async Task<FamiliaDTO> UpdateAsync(FamiliaDTO entity)
     {
         throw new NotImplementedException();
     }
 
     public void Dispose()
     {
-        throw new NotImplementedException();
+        _familiaRepository?.Dispose();
     }
 }

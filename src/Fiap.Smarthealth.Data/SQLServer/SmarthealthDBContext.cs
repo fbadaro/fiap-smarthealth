@@ -13,12 +13,19 @@ public class SmarthealthDBContext : DbContext
     }
     
     public DbSet<AgenteSaude> AgentesSaude { get; set; } = null!;
+
     public DbSet<Familia> Familias { get; set; } = null!;
+
     public DbSet<FamiliaMembro> Membros { get; set; } = null!;
+
     public DbSet<Genero> Generos { get; set; } = null!;
+
     public DbSet<Medico> Medicos { get; set; } = null!;
+
     public DbSet<MedicoEspecialidade> Especialidades { get; set; } = null!;
+
     public DbSet<PostoSaude> PostosSaude { get; set; } = null!;
+
     public DbSet<RegistroVacina> Vacinas { get; set; } = null!;
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

@@ -1,14 +1,14 @@
 ﻿namespace Fiap.Smarthealth.Application;
 
-public interface IApplicationService<T> : IDisposable where T : EntityDTO
+public interface IApplicationService<TEntityDTO> : IDisposable where TEntityDTO : EntityDTO
 {
-    Task<List<T>> GetAllAsync();
+    Task<List<TEntityDTO>> GetAllAsync();
 
-    Task<T> GetById(Guid id);
+    Task<TEntityDTO> GetById(Guid id);
 
-    Task<T> CreateAsync(T entity);
+    Task<TEntityDTO> CreateAsync(TEntityDTO entity);
 
-    Task<T> UpdateAsync(T entity);
+    Task<TEntityDTO> UpdateAsync(TEntityDTO entity);
 
-    Task DeleteAsync(T entity);    
+    Task DeleteAsync(TEntityDTO entity);    
 }
