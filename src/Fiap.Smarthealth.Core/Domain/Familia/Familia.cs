@@ -3,7 +3,7 @@ using Fiap.Smarthealth.Core.Entities;
 
 namespace Fiap.Smarthealth.Core.Domain;
 
-public class Familia : Entity<Guid>
+public class Familia : IEntity<Guid>
 {
     public Familia(string sobrenome, CNS cNS, Endereco endereco, string telefone, string email)
     {
@@ -15,6 +15,8 @@ public class Familia : Entity<Guid>
     }
 
     public Familia() { }
+
+    public Guid Id { get; set; }
 
     public string Sobrenome { get; private set; }
 

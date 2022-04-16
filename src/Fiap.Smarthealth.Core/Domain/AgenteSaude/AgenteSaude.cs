@@ -3,7 +3,7 @@ using Fiap.Smarthealth.Core.Entities;
 
 namespace Fiap.Smarthealth.Core.Domain;
 
-public class AgenteSaude : Entity<Guid>
+public class AgenteSaude : IEntity<Guid>
 {
     public AgenteSaude(string nome, CPF cpf, string telefone, DateTime dataNascimento, CNS cns)
     {
@@ -12,9 +12,11 @@ public class AgenteSaude : Entity<Guid>
         Telefone = telefone;
         DataNascimento = dataNascimento;
         CNS = cns;
-    }
+    }    
 
     public AgenteSaude () { }
+
+    public Guid Id { get; set; }
 
     public string Nome { get; private set; }
 
@@ -24,5 +26,5 @@ public class AgenteSaude : Entity<Guid>
 
     public DateTime DataNascimento { get; private set; }
 
-    public CNS CNS { get; private set; }
+    public CNS CNS { get; private set; }    
 }

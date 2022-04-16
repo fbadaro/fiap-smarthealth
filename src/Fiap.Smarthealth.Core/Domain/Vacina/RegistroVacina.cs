@@ -2,7 +2,7 @@
 
 namespace Fiap.Smarthealth.Core.Domain;
 
-public class RegistroVacina : Entity<Guid>
+public class RegistroVacina : IEntity<Guid>
 {
     public RegistroVacina(string nome, DateTime dataAplicacao, DateTime? vencimento)
     {
@@ -12,6 +12,8 @@ public class RegistroVacina : Entity<Guid>
     }
 
     public RegistroVacina() { }
+
+    public Guid Id { get; set; }
 
     public string Nome { get; private set; }
 

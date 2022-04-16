@@ -6,4 +6,14 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Fiap.Smarthealth.Core\Fiap.Smarthealth.Core.csproj" />
+    <ProjectReference Include="..\Fiap.Smarthealth.Data\Fiap.Smarthealth.Data.csproj" />
+  </ItemGroup>
+
 </Project>
