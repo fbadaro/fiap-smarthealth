@@ -1,15 +1,16 @@
-﻿namespace Fiap.Smarthealth.Core.Aggregate
+﻿namespace Fiap.Smarthealth.Core.Aggregate;
+
+public class Funcionamento
 {
-    public class Funcionamento
+    public Funcionamento(DateTime abertura, DateTime encerramento)
     {
-        public Funcionamento(DateTime abertura, DateTime encerramento)
-        {
-            Abertura = abertura;
-            Encerramento = encerramento;
-        }
-
-        public DateTime Abertura { get; private set; }
-
-        public DateTime Encerramento { get; private set; }
+        Abertura = abertura;
+        Encerramento = encerramento;
     }
+
+    public Funcionamento() { }
+
+    public DateTime Abertura { get; private set; } = default!;
+
+    public DateTime Encerramento { get; private set; } = default!;
 }

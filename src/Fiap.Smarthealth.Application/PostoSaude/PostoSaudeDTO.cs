@@ -8,9 +8,9 @@ namespace Fiap.Smarthealth.Application.PostoSaude;
 
 public class PostoSaudeDTO : EntityDTO
 {
-    public string Nome { get; set; }
+    public string Nome { get; set; } = default!;
 
-    public string Telefone { get; set; }
+    public string Telefone { get; set; } = default!;
 
-    public string Email { get; set; }
+    public string Email { get; set; } = default!;
 }

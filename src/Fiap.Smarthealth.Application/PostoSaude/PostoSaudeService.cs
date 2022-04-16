@@ -8,12 +8,12 @@ namespace Fiap.Smarthealth.Application.PostoSaude;
 
 public class PostoSaudeService : IPostoSaudeService
 {
-    public Task<PostoSaudeDTO> CreateAsync(PostoSaudeDTO entity)
+    public Task<PostoSaudeDTO> CreateAsync(PostoSaudeDTO entityDTO)
     {
         throw new NotImplementedException();
     }
 
-    public Task DeleteAsync(PostoSaudeDTO entity)
+    public Task DeleteAsync(Guid id)
     {
         throw new NotImplementedException();
     }    
@@ -28,7 +28,7 @@ public class PostoSaudeService : IPostoSaudeService
         throw new NotImplementedException();
     }
 
-    public Task<PostoSaudeDTO> UpdateAsync(PostoSaudeDTO entity)
+    public Task<PostoSaudeDTO> UpdateAsync(PostoSaudeDTO entityDTO)
     {
         throw new NotImplementedException();
     }

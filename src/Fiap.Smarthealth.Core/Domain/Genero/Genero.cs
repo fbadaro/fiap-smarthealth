@@ -11,7 +11,7 @@ public class Genero : IEntity<Guid>
 
     public Genero() { }
 
-    public Guid Id { get; set; }
+    public Guid Id { get; set; } = default!;
 
-    public string Identificacao { get; private set; }
+    public string Identificacao { get; private set; } = default!;
 }

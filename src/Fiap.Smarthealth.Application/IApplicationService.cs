@@ -6,9 +6,9 @@ public interface IApplicationService<TEntityDTO> : IDisposable where TEntityDTO 
 
     Task<TEntityDTO> GetById(Guid id);
 
-    Task<TEntityDTO> CreateAsync(TEntityDTO entity);
+    Task<TEntityDTO> CreateAsync(TEntityDTO entityDTO);
 
-    Task<TEntityDTO> UpdateAsync(TEntityDTO entity);
+    Task<TEntityDTO> UpdateAsync(TEntityDTO entityDTO);
 
-    Task DeleteAsync(TEntityDTO entity);    
+    Task DeleteAsync(Guid id);    
 }

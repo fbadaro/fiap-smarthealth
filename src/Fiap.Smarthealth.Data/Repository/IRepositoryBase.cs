@@ -6,11 +6,11 @@ public interface IRepositoryBase<TEntity, TPrimaryKey> : IDisposable where TEnti
 {
     Task<IEnumerable<TEntity>> GetAllAsync();
 
-    Task<TEntity> GetById(Guid id);
+    Task<TEntity> GetById(TPrimaryKey id);
 
     Task<TEntity> CreateAsync(TEntity entity);
 
     Task<TEntity> UpdateAsync(TEntity entity);
 
-    Task DeleteAsync(TEntity entity);
+    Task DeleteAsync(TPrimaryKey id);
 }

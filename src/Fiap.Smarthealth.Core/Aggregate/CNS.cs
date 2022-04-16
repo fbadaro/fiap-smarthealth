@@ -1,7 +1,8 @@
-﻿namespace Fiap.Smarthealth.Core.Aggregate
+﻿namespace Fiap.Smarthealth.Core.Aggregate;
+
+public class CNS
 {
-    public class CNS
-    {
-        public string Numero { get; private set; }
-    }
+    public CNS() { }
+
+    public string Numero { get; private set; } = default!;
 }

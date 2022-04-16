@@ -1,21 +1,22 @@
-﻿namespace Fiap.Smarthealth.Core.Aggregate
+﻿namespace Fiap.Smarthealth.Core.Aggregate;
+
+public class Endereco
 {
-    public class Endereco
+    public Endereco(string logradouro, string complemento, string bairro, string cEP)
     {
-        public Endereco(string logradouro, string complemento, string bairro, string cEP)
-        {
-            Logradouro = logradouro;
-            Complemento = complemento;
-            Bairro = bairro;
-            CEP = cEP;            
-        }
-
-        public string Logradouro { get; private set; }
-
-        public string Complemento { get; private set; }
-
-        public string Bairro { get; private set; }
-
-        public string CEP { get; private set; }         
+        Logradouro = logradouro;
+        Complemento = complemento;
+        Bairro = bairro;
+        CEP = cEP;
     }
+
+    public Endereco() { }
+
+    public string Logradouro { get; private set; } = default!;
+
+    public string Complemento { get; private set; } = default!;
+
+    public string Bairro { get; private set; } = default!;
+
+    public string CEP { get; private set; } = default!;
 }

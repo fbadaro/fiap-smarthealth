@@ -16,15 +16,15 @@ public class Familia : IEntity<Guid>
 
     public Familia() { }
 
-    public Guid Id { get; set; }
+    public Guid Id { get; set; } = default!;
 
-    public string Sobrenome { get; private set; }
+    public string Sobrenome { get; private set; } = default!;
 
-    public CNS CNS { get; private set; }
+    public CNS CNS { get; private set; } = default!;
 
-    public Endereco Endereco { get; private set; }
+    public Endereco Endereco { get; private set; } = default!;
 
-    public string Telefone { get; private set; }
+    public string Telefone { get; private set; } = default!;
 
-    public string Email { get; private set; }
+    public string Email { get; private set; } = default!;
 }
