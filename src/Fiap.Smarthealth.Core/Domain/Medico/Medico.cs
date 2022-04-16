@@ -17,17 +17,17 @@ public class Medico : IEntity<Guid>
 
     public Medico() { }
 
-    public Guid Id { get; set; }
+    public Guid Id { get; set; } = default!;
 
-    public string Nome { get; private set; }
+    public string Nome { get; private set; } = default!;
 
-    public CPF CPF { get; private set; }
+    public CPF CPF { get; private set; } = default!;
 
-    public CNPJ CNPJ { get; private set; }
+    public CNPJ CNPJ { get; private set; } = default!;
 
-    public CRM CRM { get; private set; }
+    public CRM CRM { get; private set; } = default!;
 
-    public string Telefone { get; private set; }
+    public string Telefone { get; private set; } = default!;
 
-    public DateTime DataNascimento { get; private set; }
+    public DateTime DataNascimento { get; private set; } = default!;
 }

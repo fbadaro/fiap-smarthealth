@@ -1,6 +1,6 @@
 ﻿namespace Fiap.Smarthealth.Application;
 
-public class EntityDTO
+public abstract class EntityDTO
 {
     public Guid Id { get; set; }
 }

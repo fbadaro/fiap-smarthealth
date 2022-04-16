@@ -1,14 +1,15 @@
-﻿namespace Fiap.Smarthealth.Core.Aggregate
+﻿namespace Fiap.Smarthealth.Core.Aggregate;
+
+public class RG
 {
-    public class RG
+    public RG(string numero)
     {
-        public RG(string numero)
-        {
-            Numero = numero;
-        }
-
-        public string Numero { get; private set; }
-
-        private bool IsValid() => true;
+        Numero = numero;
     }
+
+    public RG() { }
+
+    public string Numero { get; private set; } = default!;
+
+    private bool IsValid() => true;
 }

@@ -1,15 +1,16 @@
-﻿namespace Fiap.Smarthealth.Core.Aggregate
+﻿namespace Fiap.Smarthealth.Core.Aggregate;
+
+public class CRM
 {
-    public class CRM
+    public CRM(string numero, string uF)
     {
-        public CRM(string numero, string uF)
-        {
-            Numero = numero;
-            UF = uF;
-        }
-
-        public string Numero { get; private set; }
-
-        public string UF { get; private set; }
+        Numero = numero;
+        UF = uF;
     }
+
+    public CRM() { }
+
+    public string Numero { get; private set; } = default!;
+
+    public string UF { get; private set; } = default!;
 }

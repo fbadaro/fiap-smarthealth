@@ -11,7 +11,7 @@ public class MedicoEspecialidade : IEntity<Guid>
 
     public MedicoEspecialidade() { }
 
-    public Guid Id { get; set; }
+    public Guid Id { get; set; } = default!;
 
-    public string Especialidade { get; private set; }
+    public string Especialidade { get; private set; } = default!;
 }

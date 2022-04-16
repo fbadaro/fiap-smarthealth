@@ -17,17 +17,17 @@ public class FamiliaMembro : IEntity<Guid>
 
     public FamiliaMembro() { }
 
-    public Guid Id { get; set; }
+    public Guid Id { get; set; } = default!;
 
-    public string Nome { get; private set; }
+    public string Nome { get; private set; } = default!;
 
-    public string NomeSocial { get; private set; }
+    public string NomeSocial { get; private set; } = default!;
 
-    public CPF CPF { get; private set; }
+    public CPF CPF { get; private set; } = default!;
 
-    public RG RG { get; private set; }
+    public RG RG { get; private set; } = default!;
 
-    public DateTime DataNascimento { get; private set; }
+    public DateTime DataNascimento { get; private set; } = default!;
 
-    public bool Responsavel { get; private set; }
+    public bool Responsavel { get; private set; } = default!;
 }

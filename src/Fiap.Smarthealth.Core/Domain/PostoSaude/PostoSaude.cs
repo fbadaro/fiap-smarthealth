@@ -17,17 +17,17 @@ public class PostoSaude : IEntity<Guid>
 
     public PostoSaude() { }
 
-    public Guid Id { get; set; }
+    public Guid Id { get; set; } = default!;
 
-    public string Nome { get; private set; }
+    public string Nome { get; private set; } = default!;
 
-    public CNPJ CNPJ { get; private set; }        
+    public CNPJ CNPJ { get; private set; } = default!;
 
-    public Endereco Endereco { get; private set; }
+    public Endereco Endereco { get; private set; } = default!;
 
-    public string Telefone { get; private set; }
+    public string Telefone { get; private set; } = default!;
 
-    public string Email { get; private set; }
+    public string Email { get; private set; } = default!;
 
-    public Funcionamento Funcionamento { get; private set; }    
+    public Funcionamento Funcionamento { get; private set; } = default!;
 }

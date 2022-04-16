@@ -1,20 +1,21 @@
-﻿namespace Fiap.Smarthealth.Core.Aggregate
+﻿namespace Fiap.Smarthealth.Core.Aggregate;
+
+public class CPF
 {
-    public class CPF
+    public CPF(string numero, string emissor, string uF)
     {
-        public CPF(string numero, string emissor, string uF)
-        {
-            Numero = numero;
-            Emissor = emissor;
-            UF = uF;
-        }        
-
-        public string Numero { get; set; }
-
-        public string Emissor { get; set; }
-
-        public string UF { get; set; }
-
-        private bool IsValid() => true;
+        Numero = numero;
+        Emissor = emissor;
+        UF = uF;
     }
+
+    public CPF() { }
+
+    public string Numero { get; set; } = default!;
+
+    public string Emissor { get; set; } = default!;
+
+    public string UF { get; set; } = default!;
+
+    private bool IsValid() => true;
 }

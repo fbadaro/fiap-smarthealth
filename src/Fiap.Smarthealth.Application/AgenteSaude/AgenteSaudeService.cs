@@ -8,12 +8,12 @@ namespace Fiap.Smarthealth.Application.AgenteSaude;
 
 public class AgenteSaudeService : IAgenteSaudeService
 {
-    public Task<AgenteSaudeDTO> CreateAsync(AgenteSaudeDTO entity)
+    public Task<AgenteSaudeDTO> CreateAsync(AgenteSaudeDTO entityDTO)
     {
         throw new NotImplementedException();
     }
 
-    public Task DeleteAsync(AgenteSaudeDTO entity)
+    public Task DeleteAsync(Guid id)
     {
         throw new NotImplementedException();
     }
@@ -28,7 +28,7 @@ public class AgenteSaudeService : IAgenteSaudeService
         throw new NotImplementedException();
     }
 
-    public Task<AgenteSaudeDTO> UpdateAsync(AgenteSaudeDTO entity)
+    public Task<AgenteSaudeDTO> UpdateAsync(AgenteSaudeDTO entityDTO)
     {
         throw new NotImplementedException();
     }

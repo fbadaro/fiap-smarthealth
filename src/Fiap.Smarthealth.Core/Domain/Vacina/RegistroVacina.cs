@@ -13,11 +13,11 @@ public class RegistroVacina : IEntity<Guid>
 
     public RegistroVacina() { }
 
-    public Guid Id { get; set; }
+    public Guid Id { get; set; } = default!;
 
-    public string Nome { get; private set; }
+    public string Nome { get; private set; } = default!;
 
-    public DateTime DataAplicacao { get; private set; }
+    public DateTime DataAplicacao { get; private set; } = default!;
 
     public DateTime? Vencimento { get; private set; } = null;
 }

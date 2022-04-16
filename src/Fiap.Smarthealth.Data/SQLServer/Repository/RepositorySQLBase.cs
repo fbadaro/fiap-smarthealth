@@ -7,10 +7,11 @@ namespace Fiap.Smarthealth.Data.SQLServer.Repository;
 public class RepositorySQLBase<TEntity, TPrimaryKey> : IRepositoryBase<TEntity, TPrimaryKey>
     where TEntity : class, IEntity<TPrimaryKey>
 {
-    private readonly SmarthealthDBContext _context;
+    protected readonly SmarthealthDBContext _context;
 
-    public RepositorySQLBase(SmarthealthDBContext context) { 
-        _context = context; 
+    public RepositorySQLBase(SmarthealthDBContext context)
+    {
+        _context = context;
     }
 
     public async Task<TEntity> CreateAsync(TEntity entity)
@@ -20,9 +21,9 @@ public class RepositorySQLBase<TEntity, TPrimaryKey> : IRepositoryBase<TEntity, 
         return entity;
     }
 
-    public async Task DeleteAsync(TEntity entity)
-    {
-        _context.Remove(entity);
+    public async Task DeleteAsync(TPrimaryKey id)
+    {        
+        _context.Remove(await GetById(id));
         await _context.SaveChangesAsync();
     }
 
@@ -31,9 +32,9 @@ public class RepositorySQLBase<TEntity, TPrimaryKey> : IRepositoryBase<TEntity, 
         return await _context.Set<TEntity>().AsNoTracking().ToListAsync();
     }
 
-    public async Task<TEntity> GetById(Guid id)
-    {
-        var entity = await _context.Set<TEntity>().AsNoTracking().Include(g => g.Id).FirstOrDefaultAsync();
+    public async Task<TEntity> GetById(TPrimaryKey id)
+    {               
+        var entity = await _context.Set<TEntity>().FindAsync(id);
         return entity == null ? throw new Exception("Entidade não encontrada na base de dados") : entity;
     }
 
