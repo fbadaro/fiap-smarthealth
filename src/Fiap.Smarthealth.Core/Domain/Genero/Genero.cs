@@ -2,16 +2,14 @@
 
 namespace Fiap.Smarthealth.Core.Domain;
 
-public class Genero : IEntity<Guid>
+public class Genero : Entity
 {
     public Genero(string identificacao)
     {
         Identificacao = identificacao;
     }
 
-    public Genero() { }
-
-    public Guid Id { get; set; } = default!;
+    public Genero() { }    
 
     public string Identificacao { get; private set; } = default!;
 }

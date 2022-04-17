@@ -8,6 +8,8 @@ public class AgenteSaudeMapping : IEntityTypeConfiguration<AgenteSaude>
 {
     public void Configure(EntityTypeBuilder<AgenteSaude> builder)
     {
+        builder.ToTable("HT03_AGSAUDE");
+
         builder.HasKey(b => b.Id);
 
         builder.Property(b => b.Nome)

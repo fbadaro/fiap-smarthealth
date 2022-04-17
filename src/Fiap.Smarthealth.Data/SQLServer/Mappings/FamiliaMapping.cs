@@ -8,6 +8,8 @@ public class FamiliaMapping : IEntityTypeConfiguration<Familia>
 {
     public void Configure(EntityTypeBuilder<Familia> builder)
     {
+        builder.ToTable("HT04_FAMILIA");
+
         builder.HasKey(f => f.Id);
 
         builder.Property(f => f.Sobrenome)

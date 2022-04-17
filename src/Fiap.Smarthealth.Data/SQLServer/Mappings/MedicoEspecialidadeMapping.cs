@@ -8,6 +8,8 @@ public class MedicoEspecialidadeMapping : IEntityTypeConfiguration<MedicoEspecia
 {
     public void Configure(EntityTypeBuilder<MedicoEspecialidade> builder)
     {
+        builder.ToTable("HT09_ESPECIALI");
+
         builder.HasKey(m => m.Id);
 
         builder.Property(m => m.Especialidade)

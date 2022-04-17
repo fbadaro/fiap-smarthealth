@@ -2,5 +2,5 @@
 
 public interface IEntity<TPrimaryKey>
 {
-    public TPrimaryKey? Id { get; set; }
+    TPrimaryKey? Id { get; set; }
 }

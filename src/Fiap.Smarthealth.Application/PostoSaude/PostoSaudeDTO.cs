@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Fiap.Smarthealth.Application.PostoSaude;
+﻿namespace Fiap.Smarthealth.Application.PostoSaude;
 
 public class PostoSaudeDTO : EntityDTO
 {
@@ -13,4 +7,20 @@ public class PostoSaudeDTO : EntityDTO
     public string Telefone { get; set; } = default!;
 
     public string Email { get; set; } = default!;
+
+    public string CNPJNumero { get; set; } = default!;
+
+    public string CNPJEmissor { get; set; } = default!;
+
+    public string EnderecoLogradouro { get; set; } = default!;
+
+    public string EnderecoComplemento { get; set; } = default!;
+
+    public string EnderecoBairro { get; set; } = default!;
+
+    public string EnderecoCEP { get; set; } = default!;
+
+    public string FuncionamentoAbertura { get; set; } = default!;
+
+    public string FuncionamentoEncerramento { get; set; } = default!;
 }
