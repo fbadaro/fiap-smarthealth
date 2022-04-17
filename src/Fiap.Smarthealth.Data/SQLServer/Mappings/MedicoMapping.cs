@@ -8,6 +8,8 @@ public class MedicoMapping : IEntityTypeConfiguration<Medico>
 {
     public void Configure(EntityTypeBuilder<Medico> builder)
     {
+        builder.ToTable("HT02_MEDICO");
+
         builder.HasKey(m => m.Id);
 
         builder.Property(m => m.Nome)

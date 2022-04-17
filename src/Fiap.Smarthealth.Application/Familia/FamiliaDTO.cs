@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Fiap.Smarthealth.Application.Familia;
+﻿namespace Fiap.Smarthealth.Application.Familia;
 
 public class FamiliaDTO : EntityDTO
 {
@@ -14,13 +8,13 @@ public class FamiliaDTO : EntityDTO
 
     public string Email { get; set; } = default!;
 
-    public string CNS { get; set; } = default!;
+    public string CNSNumero { get; set; } = default!;
 
-    public string Logradouro { get; set; } = default!;
+    public string EnderecoLogradouro { get; set; } = default!;
 
-    public string Complemento { get; set; } = default!;
+    public string EnderecoComplemento { get; set; } = default!;
 
-    public string Bairro { get; set; } = default!;
+    public string EnderecoBairro { get; set; } = default!;
 
-    public string CEP { get; set; } = default!;
+    public string EnderecoCEP { get; set; } = default!;
 }

@@ -1,9 +1,19 @@
+using Fiap.Smarthealth.Api.Actions.AgenteSaudeEnpoint;
 using Fiap.Smarthealth.Api.Actions.FamiliaEndpoint;
 using Fiap.Smarthealth.Infrastructure.ApplicationConfiguration;
 using Fiap.Smarthealth.Infrastructure.ApplicationServices;
+using Microsoft.AspNetCore.Http.Json;
 using Microsoft.OpenApi.Models;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
+
+//builder.Services.Configure<JsonOptions>(options =>
+//{    
+//    options.SerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
+//    options.SerializerOptions.Converters.Add(new JsonStringEnumConverter(JsonNamingPolicy.CamelCase));
+//});
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
@@ -38,5 +48,5 @@ app.UseHttpsRedirection();
 
 // API Endpoints
 app.MapFamiliaEndpoint();
-
+app.MapAgenteSaudeEndpoint();
 app.Run();

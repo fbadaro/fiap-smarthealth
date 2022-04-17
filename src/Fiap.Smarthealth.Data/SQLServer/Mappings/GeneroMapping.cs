@@ -8,6 +8,8 @@ public class GeneroMapping : IEntityTypeConfiguration<Genero>
 {
     public void Configure(EntityTypeBuilder<Genero> builder)
     {
+        builder.ToTable("HT10_GENERO");
+
         builder.HasKey(b => b.Id);
 
         builder.Property(b => b.Identificacao)

@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Fiap.Smarthealth.Data.Repository;
 
 namespace Fiap.Smarthealth.Data.SQLServer.Repository.PostoSaude;
 
-internal interface IPostoSaudeRepository
+/// <summary>
+/// Used to apply custom methods of EFRepositoryBase
+/// </summary>
+public interface IPostoSaudeRepository : IRepositoryBase<Core.Domain.PostoSaude, Guid>
 {
 }

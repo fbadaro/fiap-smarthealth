@@ -8,6 +8,8 @@ public class FamiliaMembroMapping : IEntityTypeConfiguration<FamiliaMembro>
 {
     public void Configure(EntityTypeBuilder<FamiliaMembro> builder)
     {
+        builder.ToTable("HT05_MEMBRO");
+
         builder.HasKey(f => f.Id);
 
         builder.Property(f => f.Nome)

@@ -8,6 +8,8 @@ public class PostoSaudeMapping : IEntityTypeConfiguration<PostoSaude>
 {
     public void Configure(EntityTypeBuilder<PostoSaude> builder)
     {
+        builder.ToTable("HT01_PSSAUDE");
+
         builder.HasKey(p => p.Id);
 
         builder.Property(p => p.Nome)

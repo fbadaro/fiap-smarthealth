@@ -5,14 +5,24 @@ namespace Fiap.Smarthealth.Application.Familia;
 
 public class FamiliaService : IFamiliaService
 {
+    #region Properties
+
     private readonly IFamiliaRepository _familiaRepository;
     private readonly IMapper _mapper;
+
+    #endregion
+
+    #region Constructor
 
     public FamiliaService(IFamiliaRepository familiaRepository, IMapper mapper)
     {
         _familiaRepository = familiaRepository;
         _mapper = mapper;
     }
+
+    #endregion
+
+    #region Public Methods
 
     public async Task<List<FamiliaDTO>> GetAllAsync() => _mapper.Map<List<FamiliaDTO>>(await _familiaRepository.GetAllAsync());
 
@@ -35,5 +45,7 @@ public class FamiliaService : IFamiliaService
     public void Dispose()
     {
         _familiaRepository?.Dispose();
-    }
+    } 
+
+    #endregion
 }

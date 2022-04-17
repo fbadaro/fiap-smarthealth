@@ -1,6 +1,6 @@
 ﻿namespace Fiap.Smarthealth.Core.Entities;
 
-public interface IEntityValidator<TEntity, TKey> where TEntity : IEntity<TKey>
+public interface IEntityValidator<TEntity, TPrimaryKey> where TEntity : IEntity<TPrimaryKey>
 {
     Task<EntityValidationResult> Validate(EntityValidationType validationType, TEntity entity);
 }

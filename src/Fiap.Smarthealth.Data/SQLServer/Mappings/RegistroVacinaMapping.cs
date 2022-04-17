@@ -8,6 +8,8 @@ public class RegistroVacinaMapping : IEntityTypeConfiguration<RegistroVacina>
 {
     public void Configure(EntityTypeBuilder<RegistroVacina> builder)
     {
+        builder.ToTable("HT06_REGVACI");
+
         builder.HasKey(r => r.Id);
 
         builder.Property(r => r.Nome)

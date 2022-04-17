@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace Fiap.Smarthealth.Data.SQLServer.Repository.PostoSaude;
 
-namespace Fiap.Smarthealth.Data.SQLServer.Repository.PostoSaude;
-
-internal class PostoSaudeRepository
+public class PostoSaudeRepository : RepositorySQLBase<Core.Domain.PostoSaude, Guid>, IPostoSaudeRepository
 {
+    public PostoSaudeRepository(SmarthealthDBContext context) : base(context)
+    {
+    }
 }

@@ -2,6 +2,7 @@
 
 TODOS:
 - [ ] Implementar o JWT Token;
+- [ ] Implementar o UnitOfWork;
 - [ ] Implementar autenticação, autorização e polices de segurança;
 - [ ] Implementar o MiniValidator da MinimalAPI para validações dos objetos de DTO;
 - [ ] Implementar o AsNoTracking no método Find do RepositoryBase com TPrimaryKey genérica para o EF não dar lock na entidade de pesquisa;
