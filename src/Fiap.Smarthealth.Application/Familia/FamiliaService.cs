@@ -42,10 +42,7 @@ public class FamiliaService : IFamiliaService
         return _mapper.Map<FamiliaDTO>(familia);
     }
 
-    public void Dispose()
-    {
-        _familiaRepository?.Dispose();
-    } 
+    public void Dispose() => _familiaRepository?.Dispose();    
 
     #endregion
 }

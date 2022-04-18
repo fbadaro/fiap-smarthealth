@@ -42,10 +42,7 @@ public class AgenteSaudeService : IAgenteSaudeService
         return _mapper.Map<AgenteSaudeDTO>(agenteSaude);
     }
 
-    public void Dispose()
-    {
-        _agenteSaudeRepository?.Dispose();
-    } 
+    public void Dispose() => _agenteSaudeRepository?.Dispose();
 
     #endregion
 }
