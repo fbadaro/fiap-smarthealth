@@ -1,40 +1,49 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using AutoMapper;
+using Fiap.Smarthealth.Data.SQLServer.Repository.PostoSaude;
 
 namespace Fiap.Smarthealth.Application.PostoSaude;
 
 public class PostoSaudeService : IPostoSaudeService
 {
-    public Task<PostoSaudeDTO> CreateAsync(PostoSaudeDTO entityDTO)
+    #region Properties
+
+    private readonly IPostoSaudeRepository _postoSaudeRepository;
+    private readonly IMapper _mapper;
+
+    #endregion
+
+    #region Constructor
+
+    public PostoSaudeService(IPostoSaudeRepository postoSaudeRepository, IMapper mapper)
     {
-        throw new NotImplementedException();
+        _postoSaudeRepository = postoSaudeRepository;
+        _mapper = mapper;
     }
 
-    public Task DeleteAsync(Guid id)
-    {
-        throw new NotImplementedException();
-    }    
+    #endregion
 
-    public Task<List<PostoSaudeDTO>> GetAllAsync()
-    {
-        throw new NotImplementedException();
+    #region Public Methods
+
+    public async Task<List<PostoSaudeDTO>> GetAllAsync() => _mapper.Map<List<PostoSaudeDTO>>(await _postoSaudeRepository.GetAllAsync());
+
+    public async Task<PostoSaudeDTO> CreateAsync(PostoSaudeDTO entityDTO)
+    {        
+        var postoSaude = await _postoSaudeRepository.CreateAsync(_mapper.Map<Core.Domain.PostoSaude>(entityDTO));
+        return _mapper.Map<PostoSaudeDTO>(postoSaude);
     }
 
-    public Task<PostoSaudeDTO> GetById(Guid id)
+    public async Task DeleteAsync(Guid id) => await _postoSaudeRepository.DeleteAsync(id);
+
+
+    public async Task<PostoSaudeDTO> GetById(Guid id) => _mapper.Map<PostoSaudeDTO>(await _postoSaudeRepository.GetById(id));
+
+    public async Task<PostoSaudeDTO> UpdateAsync(PostoSaudeDTO entityDTO)
     {
-        throw new NotImplementedException();
+        var postoSaude = await _postoSaudeRepository.UpdateAsync(_mapper.Map<Core.Domain.PostoSaude>(entityDTO));
+        return _mapper.Map<PostoSaudeDTO>(postoSaude);
     }
 
-    public Task<PostoSaudeDTO> UpdateAsync(PostoSaudeDTO entityDTO)
-    {
-        throw new NotImplementedException();
-    }
+    public void Dispose() => _postoSaudeRepository?.Dispose();
 
-    public void Dispose()
-    {
-        throw new NotImplementedException();
-    }
+    #endregion
 }

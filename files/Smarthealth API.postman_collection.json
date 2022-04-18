@@ -1,0 +1,1620 @@
+{
+	"info": {
+		"_postman_id": "f30f7101-ac56-4e4e-a7b6-73d382bbc4b0",
+		"name": "Smarthealth API",
+		"description": "API de integração com o Smarthealth\n\nContact Support:\n Name: smarthealth.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "agente",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "Get Agente Saude By Id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/agente/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"agente",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "a3cfbb5d-6daa-4e5b-8c12-08da20cd9ca4",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/agente/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"agente",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "velit sed ipsum consequat",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"urn:uuid:5a2a53ee-1bf3-c48c-8960-3bced1384e84\",\n  \"nome\": \"officia\",\n  \"telefone\": \"magna nisi\",\n  \"dataNascimento\": \"2005-10-17T05:02:21.933Z\",\n  \"cnsNumero\": \"aliquip\",\n  \"cpfNumero\": \"in non do sint et\",\n  \"cpfEmissor\": \"quis nostrud consequat\",\n  \"cpfuf\": \"deserunt veniam culpa dolor\"\n}"
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/agente/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"agente",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "velit sed ipsum consequat",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Put Agente Saude",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nome\": \"Fábio Badaró da Silva\",\n    \"telefone\": \"11 9688889999\",\n    \"dataNascimento\": \"0001-01-01T00:00:00\",\n    \"cnsNumero\": \"294179616510002\",\n    \"cpfNumero\": \"72778184740\",\n    \"cpfEmissor\": \"SSP\",\n    \"cpfuf\": \"SP\",\n    \"id\": \"a3cfbb5d-6daa-4e5b-8c12-08da20cd9ca4\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/agente/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"agente",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "a3cfbb5d-6daa-4e5b-8c12-08da20cd9ca4",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": \"e949916b-8000-37fa-b26c-e2da19f72e24\",\n  \"nome\": \"aliqua\",\n  \"telefone\": \"aute mollit\",\n  \"cnsNumero\": \"des\",\n  \"cpfNumero\": \"aliqua eiusmod nulla in\",\n  \"cpfEmissor\": \"elit aliqua\",\n  \"cpfuf\": \"qui do magna dolore\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/agente/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"agente",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "velit sed ipsum consequat",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": \"e949916b-8000-37fa-b26c-e2da19f72e24\",\n  \"nome\": \"aliqua\",\n  \"telefone\": \"aute mollit\",\n  \"cnsNumero\": \"des\",\n  \"cpfNumero\": \"aliqua eiusmod nulla in\",\n  \"cpfEmissor\": \"elit aliqua\",\n  \"cpfuf\": \"qui do magna dolore\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/agente/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"agente",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "velit sed ipsum consequat",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Delete Agente Saude",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/agente/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"agente",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "a3cfbb5d-6daa-4e5b-8c12-08da20cd9ca4",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/agente/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"agente",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "velit sed ipsum consequat",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/agente/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"agente",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "velit sed ipsum consequat",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/agente/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"agente",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "velit sed ipsum consequat",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Get Agente Saude",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/agente",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"agente"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/agente",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"agente"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"id\": \"1529341c-14a1-239d-7cfa-d434280e5c1d\",\n    \"nome\": \"quis ex\",\n    \"telefone\": \"ad exercitation dolor adipisicing nisi\",\n    \"dataNascimento\": \"1993-03-27T18:47:04.876Z\",\n    \"cnsNumero\": \"d\",\n    \"cpfNumero\": \"aute do dolor sint\",\n    \"cpfEmissor\": \"adipisicing anim labore in eiusmod\",\n    \"cpfuf\": \"Excepteur\"\n  },\n  {\n    \"id\": \"urn:uuid:b8251b3c-882f-bd4c-c1b2-a5332e460d72\",\n    \"nome\": \"deserunt\",\n    \"telefone\": \"Excepteur est\",\n    \"dataNascimento\": \"2019-06-12T00:13:26.959Z\",\n    \"cnsNumero\": \"dolor eu\",\n    \"cpfNumero\": \"incididunt\",\n    \"cpfEmissor\": \"amet incididunt consequat consect\",\n    \"cpfuf\": \"commodo voluptate eu\"\n  }\n]"
+						}
+					]
+				},
+				{
+					"name": "Post Agente Saude",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \n  \"nome\": \"Fábio Badaró\",\n  \"telefone\": \"11 9688889999\",\n  \"cnsNumero\": \"294179616510002\",\n  \"cpfNumero\": \"72778184740\",\n  \"cpfEmissor\": \"SSP\",\n  \"cpfuf\": \"SP\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/agente",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"agente"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"e949916b-8000-37fa-b26c-e2da19f72e24\",\n  \"nome\": \"aliqua\",\n  \"telefone\": \"aute mollit\",\n  \"cnsNumero\": \"des\",\n  \"cpfNumero\": \"aliqua eiusmod nulla in\",\n  \"cpfEmissor\": \"elit aliqua\",\n  \"cpfuf\": \"qui do magna dolore\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/agente",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"agente"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"id\": \"urn:uuid:5a2a53ee-1bf3-c48c-8960-3bced1384e84\",\n  \"nome\": \"officia\",\n  \"telefone\": \"magna nisi\",\n  \"dataNascimento\": \"2005-10-17T05:02:21.933Z\",\n  \"cnsNumero\": \"aliquip\",\n  \"cpfNumero\": \"in non do sint et\",\n  \"cpfEmissor\": \"quis nostrud consequat\",\n  \"cpfuf\": \"deserunt veniam culpa dolor\"\n}"
+						},
+						{
+							"name": "Bad Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"e949916b-8000-37fa-b26c-e2da19f72e24\",\n  \"nome\": \"aliqua\",\n  \"telefone\": \"aute mollit\",\n  \"cnsNumero\": \"des\",\n  \"cpfNumero\": \"aliqua eiusmod nulla in\",\n  \"cpfEmissor\": \"elit aliqua\",\n  \"cpfuf\": \"qui do magna dolore\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/agente",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"agente"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "familia",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "Get Familia By Id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/familia/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"familia",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1f5bb838-4481-42da-a6ba-08da20c708a4",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/familia/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"familia",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "velit sed ipsum consequat",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"urn:uuid:df906260-963d-de48-397b-c872b478f60f\",\n  \"sobrenome\": \"cillu\",\n  \"telefone\": \"labore est\",\n  \"email\": \"occaeca\",\n  \"cnsNumero\": \"ex aliqua\",\n  \"enderecoLogradouro\": \"ipsum occaecat enim Lorem commodo\",\n  \"enderecoComplemento\": \"proident labore in mollit\",\n  \"enderecoBairro\": \"incididunt Excepteur minim Duis\",\n  \"enderecoCEP\": \"aute ut officia consectetur\"\n}"
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/familia/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"familia",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "velit sed ipsum consequat",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Put Familia",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"sobrenome\": \"Familia Alvarenga\",\n    \"telefone\": \"11988887777\",\n    \"email\": \"badaro@mail.com\",\n    \"cnsNumero\": \"923233666360003\",\n    \"enderecoLogradouro\": \"Av Vianas\",\n    \"enderecoComplemento\": \"sem complemento\",\n    \"enderecoBairro\": \"Jardim Petroni\",\n    \"enderecoCEP\": \"09720-784\",\n    \"id\": \"1f5bb838-4481-42da-a6ba-08da20c708a4\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/familia/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"familia",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1f5bb838-4481-42da-a6ba-08da20c708a4",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": \"urn:uuid:df906260-963d-de48-397b-c872b478f60f\",\n  \"sobrenome\": \"cillu\",\n  \"telefone\": \"labore est\",\n  \"email\": \"occaeca\",\n  \"cnsNumero\": \"ex aliqua\",\n  \"enderecoLogradouro\": \"ipsum occaecat enim Lorem commodo\",\n  \"enderecoComplemento\": \"proident labore in mollit\",\n  \"enderecoBairro\": \"incididunt Excepteur minim Duis\",\n  \"enderecoCEP\": \"aute ut officia consectetur\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/familia/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"familia",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "velit sed ipsum consequat",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": \"urn:uuid:df906260-963d-de48-397b-c872b478f60f\",\n  \"sobrenome\": \"cillu\",\n  \"telefone\": \"labore est\",\n  \"email\": \"occaeca\",\n  \"cnsNumero\": \"ex aliqua\",\n  \"enderecoLogradouro\": \"ipsum occaecat enim Lorem commodo\",\n  \"enderecoComplemento\": \"proident labore in mollit\",\n  \"enderecoBairro\": \"incididunt Excepteur minim Duis\",\n  \"enderecoCEP\": \"aute ut officia consectetur\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/familia/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"familia",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "velit sed ipsum consequat",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Delete Familia",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/familia/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"familia",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1f5bb838-4481-42da-a6ba-08da20c708a4",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/familia/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"familia",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "velit sed ipsum consequat",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/familia/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"familia",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "velit sed ipsum consequat",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/familia/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"familia",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "velit sed ipsum consequat",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Get Familia",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/familia",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"familia"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/familia",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"familia"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"id\": \"urn:uuid:1713e842-e74f-ee6d-87bd-824f7b7b2f30\",\n    \"sobrenome\": \"nulla ipsum ex\",\n    \"telefone\": \"cupidatat dolor\",\n    \"email\": \"velit in\",\n    \"cnsNumero\": \"deserunt\",\n    \"enderecoLogradouro\": \"in deserunt\",\n    \"enderecoComplemento\": \"\",\n    \"enderecoBairro\": \"in esse\",\n    \"enderecoCEP\": \"pariatur ex labore\"\n  },\n  {\n    \"id\": \"urn:uuid:0267ceca-d713-b458-ab23-aaec880fe637\",\n    \"sobrenome\": \"id sed do\",\n    \"telefone\": \"dolor ut Duis ad\",\n    \"email\": \"aliqua consectetur\",\n    \"cnsNumero\": \"id minim pariatur\",\n    \"enderecoLogradouro\": \"commodo proident irure\",\n    \"enderecoComplemento\": \"eiusmod in\",\n    \"enderecoBairro\": \"Lorem cillum aute\",\n    \"enderecoCEP\": \"eiusmod\"\n  }\n]"
+						}
+					]
+				},
+				{
+					"name": "Post Familia",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \n  \"sobrenome\": \"Familia Badaro\",\n  \"telefone\": \"11988887777\",\n  \"email\": \"badaro@mail.com\",\n  \"cnsNumero\": \"923233666360003\",\n  \"enderecoLogradouro\": \"Av Vianas\",\n  \"enderecoComplemento\": \"sem complemento\",\n  \"enderecoBairro\": \"Jardim Petroni\",\n  \"enderecoCEP\": \"09720-784\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/familia",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"familia"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"urn:uuid:df906260-963d-de48-397b-c872b478f60f\",\n  \"sobrenome\": \"cillu\",\n  \"telefone\": \"labore est\",\n  \"email\": \"occaeca\",\n  \"cnsNumero\": \"ex aliqua\",\n  \"enderecoLogradouro\": \"ipsum occaecat enim Lorem commodo\",\n  \"enderecoComplemento\": \"proident labore in mollit\",\n  \"enderecoBairro\": \"incididunt Excepteur minim Duis\",\n  \"enderecoCEP\": \"aute ut officia consectetur\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/familia",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"familia"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"id\": \"urn:uuid:df906260-963d-de48-397b-c872b478f60f\",\n  \"sobrenome\": \"cillu\",\n  \"telefone\": \"labore est\",\n  \"email\": \"occaeca\",\n  \"cnsNumero\": \"ex aliqua\",\n  \"enderecoLogradouro\": \"ipsum occaecat enim Lorem commodo\",\n  \"enderecoComplemento\": \"proident labore in mollit\",\n  \"enderecoBairro\": \"incididunt Excepteur minim Duis\",\n  \"enderecoCEP\": \"aute ut officia consectetur\"\n}"
+						},
+						{
+							"name": "Bad Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"urn:uuid:df906260-963d-de48-397b-c872b478f60f\",\n  \"sobrenome\": \"cillu\",\n  \"telefone\": \"labore est\",\n  \"email\": \"occaeca\",\n  \"cnsNumero\": \"ex aliqua\",\n  \"enderecoLogradouro\": \"ipsum occaecat enim Lorem commodo\",\n  \"enderecoComplemento\": \"proident labore in mollit\",\n  \"enderecoBairro\": \"incididunt Excepteur minim Duis\",\n  \"enderecoCEP\": \"aute ut officia consectetur\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/familia",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"familia"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "posto",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "Get Posto Saude By Id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/posto/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"posto",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "ed4a1b8b-6b50-412f-aab1-08da20caf22f",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/posto/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"posto",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "velit sed ipsum consequat",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"urn:uuid:abf7cc18-d1e7-1ab3-b4b7-cf1610fe36ed\",\n  \"nome\": \"elit anim nos\",\n  \"telefone\": \"culpa elit\",\n  \"email\": \"ullamco l\",\n  \"cnpjNumero\": \"ullamco\",\n  \"cnpjEmissor\": \"ad ex\",\n  \"enderecoLogradouro\": \"labore Excepteur\",\n  \"enderecoComplemento\": \"nulla deserunt in amet\",\n  \"enderecoBairro\": \"laboris\",\n  \"enderecoCEP\": \"incididunt in esse eu mollit\",\n  \"funcionamentoAbertura\": \"dolor nostrud commodo\",\n  \"funcionamentoEncerramento\": \"dolore aliqua\"\n}"
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/posto/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"posto",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "velit sed ipsum consequat",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Put Posto Saude",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nome\": \"Posto de Saude 1\",\n    \"telefone\": \"43327889\",\n    \"email\": \"postosaude@mail.gov.br\",\n    \"cnpjNumero\": \"62222638000124\",\n    \"cnpjEmissor\": \"SSP\",\n    \"enderecoLogradouro\": \"Rua Posto de Saude 3\",\n    \"enderecoComplemento\": \"190\",\n    \"enderecoBairro\": \"Jd Itaqua\",\n    \"enderecoCEP\": \"09720-420\",\n    \"funcionamentoAbertura\": \"4/17/2022 8:00:00 AM\",\n    \"funcionamentoEncerramento\": \"4/17/2022 7:00:00 PM\",\n    \"id\": \"ed4a1b8b-6b50-412f-aab1-08da20caf22f\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/posto/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"posto",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "ed4a1b8b-6b50-412f-aab1-08da20caf22f",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": \"urn:uuid:abf7cc18-d1e7-1ab3-b4b7-cf1610fe36ed\",\n  \"nome\": \"elit anim nos\",\n  \"telefone\": \"culpa elit\",\n  \"email\": \"ullamco l\",\n  \"cnpjNumero\": \"ullamco\",\n  \"cnpjEmissor\": \"ad ex\",\n  \"enderecoLogradouro\": \"labore Excepteur\",\n  \"enderecoComplemento\": \"nulla deserunt in amet\",\n  \"enderecoBairro\": \"laboris\",\n  \"enderecoCEP\": \"incididunt in esse eu mollit\",\n  \"funcionamentoAbertura\": \"dolor nostrud commodo\",\n  \"funcionamentoEncerramento\": \"dolore aliqua\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/posto/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"posto",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "velit sed ipsum consequat",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": \"urn:uuid:abf7cc18-d1e7-1ab3-b4b7-cf1610fe36ed\",\n  \"nome\": \"elit anim nos\",\n  \"telefone\": \"culpa elit\",\n  \"email\": \"ullamco l\",\n  \"cnpjNumero\": \"ullamco\",\n  \"cnpjEmissor\": \"ad ex\",\n  \"enderecoLogradouro\": \"labore Excepteur\",\n  \"enderecoComplemento\": \"nulla deserunt in amet\",\n  \"enderecoBairro\": \"laboris\",\n  \"enderecoCEP\": \"incididunt in esse eu mollit\",\n  \"funcionamentoAbertura\": \"dolor nostrud commodo\",\n  \"funcionamentoEncerramento\": \"dolore aliqua\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/posto/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"posto",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "velit sed ipsum consequat",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Delete Posto Saude",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/posto/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"posto",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "ed4a1b8b-6b50-412f-aab1-08da20caf22f",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/posto/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"posto",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "velit sed ipsum consequat",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/posto/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"posto",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "velit sed ipsum consequat",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/posto/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"posto",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "velit sed ipsum consequat",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Get Posto Saude",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/posto",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"posto"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/posto",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"posto"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"id\": \"urn:uuid:168a971a-a6de-5937-d958-54a37a36d981\",\n    \"nome\": \"nostrud Lorem aliquip\",\n    \"telefone\": \"sit dolor veniam anim\",\n    \"email\": \"Duis eu cillum nulla id\",\n    \"cnpjNumero\": \"consectetur in\",\n    \"cnpjEmissor\": \"sed Lorem sit\",\n    \"enderecoLogradouro\": \"id anim\",\n    \"enderecoComplemento\": \"culpa fugiat sed\",\n    \"enderecoBairro\": \"eu\",\n    \"enderecoCEP\": \"ad esse cupidatat commodo\",\n    \"funcionamentoAbertura\": \"eu aliquip\",\n    \"funcionamentoEncerramento\": \"ea sunt mollit labore et\"\n  },\n  {\n    \"id\": \"urn:uuid:d8e5aec6-1de7-276f-b0db-16a72d8af353\",\n    \"nome\": \"consequat enim dolore\",\n    \"telefone\": \"consectetur qui do nostrud\",\n    \"email\": \"nulla reprehenderit\",\n    \"cnpjNumero\": \"dolor pariatur in\",\n    \"cnpjEmissor\": \"aliqua dolore irure consectetur\",\n    \"enderecoLogradouro\": \"deserunt non consectetur\",\n    \"enderecoComplemento\": \"commodo consectetur cupidatat eiusmod\",\n    \"enderecoBairro\": \"consequat\",\n    \"enderecoCEP\": \"nulla laborum\",\n    \"funcionamentoAbertura\": \"Excepteur deserunt culpa ullamco\",\n    \"funcionamentoEncerramento\": \"non aliquip\"\n  }\n]"
+						}
+					]
+				},
+				{
+					"name": "Post Posto Saude",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \n  \"nome\": \"Posto de Saude 1\",\n  \"telefone\": \"43327889\",\n  \"email\": \"postosaude@mail.gov.br\",\n  \"cnpjNumero\": \"62222638000124\",\n  \"cnpjEmissor\": \"SSP\",\n  \"enderecoLogradouro\": \"Rua Posto de Saude 1\",\n  \"enderecoComplemento\": \"180\",\n  \"enderecoBairro\": \"Laboris\",\n  \"enderecoCEP\": \"09720-418\",\n  \"funcionamentoAbertura\": \"08:00\",\n  \"funcionamentoEncerramento\": \"19:00\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/posto",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"posto"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"urn:uuid:abf7cc18-d1e7-1ab3-b4b7-cf1610fe36ed\",\n  \"nome\": \"elit anim nos\",\n  \"telefone\": \"culpa elit\",\n  \"email\": \"ullamco l\",\n  \"cnpjNumero\": \"ullamco\",\n  \"cnpjEmissor\": \"ad ex\",\n  \"enderecoLogradouro\": \"labore Excepteur\",\n  \"enderecoComplemento\": \"nulla deserunt in amet\",\n  \"enderecoBairro\": \"laboris\",\n  \"enderecoCEP\": \"incididunt in esse eu mollit\",\n  \"funcionamentoAbertura\": \"dolor nostrud commodo\",\n  \"funcionamentoEncerramento\": \"dolore aliqua\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/posto",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"posto"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"id\": \"urn:uuid:abf7cc18-d1e7-1ab3-b4b7-cf1610fe36ed\",\n  \"nome\": \"elit anim nos\",\n  \"telefone\": \"culpa elit\",\n  \"email\": \"ullamco l\",\n  \"cnpjNumero\": \"ullamco\",\n  \"cnpjEmissor\": \"ad ex\",\n  \"enderecoLogradouro\": \"labore Excepteur\",\n  \"enderecoComplemento\": \"nulla deserunt in amet\",\n  \"enderecoBairro\": \"laboris\",\n  \"enderecoCEP\": \"incididunt in esse eu mollit\",\n  \"funcionamentoAbertura\": \"dolor nostrud commodo\",\n  \"funcionamentoEncerramento\": \"dolore aliqua\"\n}"
+						},
+						{
+							"name": "Bad Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"urn:uuid:abf7cc18-d1e7-1ab3-b4b7-cf1610fe36ed\",\n  \"nome\": \"elit anim nos\",\n  \"telefone\": \"culpa elit\",\n  \"email\": \"ullamco l\",\n  \"cnpjNumero\": \"ullamco\",\n  \"cnpjEmissor\": \"ad ex\",\n  \"enderecoLogradouro\": \"labore Excepteur\",\n  \"enderecoComplemento\": \"nulla deserunt in amet\",\n  \"enderecoBairro\": \"laboris\",\n  \"enderecoCEP\": \"incididunt in esse eu mollit\",\n  \"funcionamentoAbertura\": \"dolor nostrud commodo\",\n  \"funcionamentoEncerramento\": \"dolore aliqua\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/posto",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"posto"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://localhost:7055"
+		}
+	]
+}
