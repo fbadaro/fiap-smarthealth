@@ -16,15 +16,19 @@ namespace Fiap.Smarthealth.Infrastructure.ApplicationServices;
 
 public static class ApplicationBootstraper
 {
-    public static void AddDBContextApplication(this IServiceCollection services)
+    public static void AddDBContextApplication(this IServiceCollection services, bool IsDevelopment)
     {
         IConfigurationRoot configuration = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
                 .AddJsonFile(Directory.GetCurrentDirectory() + "/../Fiap.Smarthealth.Api/appsettings.json")
                 .Build();
 
+        if (IsDevelopment)        
+            services.AddDbContext<SmarthealthDBContext>(options =>
+                options.UseInMemoryDatabase("UseInMemoryDatabase"));        
+
         services.AddDbContext<SmarthealthDBContext>(options =>
-               options.UseSqlServer(configuration["SqlServer:ConnectionString"]));
+                options.UseSqlServer(configuration["SqlServer:ConnectionString"]));
     }
 
     public static void AddServiceApplication(this IServiceCollection services)

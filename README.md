@@ -1,5 +1,8 @@
 # Smarthealth API 0.0.1
 
+- Está implementado o InMemoryDataBase, então para efetuar os testes basta fazer o clone/download do projeto e iniciar a aplicação com a variável de ambiente Development;
+- Dentro da pasta Files contém o arquivo .json com toda documentação da API para ser importada para o Postman (https://www.postman.com/) e pronta para utilização, também há uma documentação da API funcionando.
+
 TODOS:
 - [ ] Implementar o JWT Token;
 - [ ] Implementar o UnitOfWork;
