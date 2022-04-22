@@ -8,6 +8,7 @@ using Microsoft.OpenApi.Models;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
+var builderInDevelopment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Development";
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.Configure<JsonOptions>(options =>
@@ -34,17 +35,12 @@ builder.Services.AddSwaggerGen(options =>
 });
 
 builder.Services.AddAutoMapperApplication(typeof(Program).Assembly);
-builder.Services.AddDBContextApplication();
+builder.Services.AddDBContextApplication(IsDevelopment: builderInDevelopment);
 builder.Services.AddServiceApplication();
 
 var app = builder.Build();
-
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
-
+app.UseSwagger();
+app.UseSwaggerUI();
 app.UseHttpsRedirection();
 
 // API Endpoints

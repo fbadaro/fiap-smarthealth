@@ -33,14 +33,14 @@ public class SmarthealthDBContext : DbContext
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(SmarthealthDBContext).Assembly);
     }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
-        IConfigurationRoot configuration = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile(Directory.GetCurrentDirectory() + "/../Fiap.Smarthealth.Api/appsettings.json")
-                .Build();
+    //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    //{
+    //    IConfigurationRoot configuration = new ConfigurationBuilder()
+    //            .SetBasePath(Directory.GetCurrentDirectory())
+    //            .AddJsonFile(Directory.GetCurrentDirectory() + "/../Fiap.Smarthealth.Api/appsettings.json")
+    //            .Build();
         
-        optionsBuilder.UseSqlServer(configuration["SqlServer:ConnectionString"], opt =>
-            opt.MigrationsHistoryTable("MigrationSmarthealthContext"));
-    }
+    //    optionsBuilder.UseSqlServer(configuration["SqlServer:ConnectionString"], opt =>
+    //        opt.MigrationsHistoryTable("MigrationSmarthealthContext"));
+    //}
 }
